@@ -37,7 +37,7 @@ for item in items:
 
             # convert wordpress date format to jrnl date format
             split_date = pub_date.split()
-            pub_date = "%s-%s-%s %s" % (month_dict[split_date[2]], split_date[1], split_date[3], split_date[4][:5])
+            pub_date = "%s-%s-%s %s" % (split_date[3], month_dict[split_date[2]], split_date[1], split_date[4][:5])
 
         elif element.tag == "title":
             title = element.text
