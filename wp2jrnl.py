@@ -3,13 +3,6 @@
 from lxml import etree
 import sys
 
-infile = sys.argv[1]
-outfile = sys.argv[2]
-f = open(outfile, 'w')
-
-tree = etree.parse(infile)
-items = tree.findall('channel/item')
-
 month_dict = {}
 month_dict['Jan'] = '01'
 month_dict['Feb'] = '02'
@@ -23,6 +16,13 @@ month_dict['Sep'] = '09'
 month_dict['Oct'] = '10'
 month_dict['Nov'] = '11'
 month_dict['Dec'] = '12'
+
+infile = sys.argv[1]
+outfile = sys.argv[2]
+f = open(outfile, 'w')
+
+tree = etree.parse(infile)
+items = tree.findall('channel/item')
 
 for item in items:
 
