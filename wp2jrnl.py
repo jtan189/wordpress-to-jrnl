@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from lxml import etree
 import sys
 
@@ -29,8 +31,6 @@ for item in items:
     content = ""
 
     for element in item.iter():
-
-        text = element.text
 
         if element.tag == "pubDate":
             pub_date = element.text
